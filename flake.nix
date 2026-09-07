@@ -33,7 +33,7 @@
             inherit inputs pkgs-unstable;
           };
           modules = [
-            ./hosts
+            ./hosts/desktop
             ./modules
             ./users
             ./pkgs

@@ -8,10 +8,13 @@
     pkgs.zed-editor
     pkgs.fastfetch
     pkgs.discord
+    pkgs.obsidian
+    pkgs.nextcloud-client
     #unstable pakages
     pkgs-unstable.telegram-desktop
     pkgs-unstable.yandex-music
     pkgs-unstable.spotify
+    pkgs-unstable.steam
   ];
 
   # Персональная настройка fish
