@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  imports = [
+    ./happ/happ.nix
+  ];
+}
