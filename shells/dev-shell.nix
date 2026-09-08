@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
@@ -16,6 +16,7 @@ pkgs.mkShell {
     ansible
     kubectl
     docker-compose
+    usbutils
   ];
 
   buildInputs = with pkgs; [

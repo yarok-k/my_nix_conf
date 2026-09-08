@@ -5,7 +5,7 @@
   home.packages = with pkgs; [
     #stable pakages
     pkgs.git
-    pkgs.zed-editor
+    pkgs-unstable.zed-editor
     pkgs.fastfetch
     pkgs.discord
     pkgs.obsidian
@@ -22,7 +22,7 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake .";
+      rebuild = "sudo nixos-rebuild switch --flake";
       dev = "nix develop ~/.config/nixos";
     };
   };

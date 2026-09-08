@@ -14,6 +14,8 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    opendeck-nix.url = "github:Kitt3120/opendeck-nix";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
