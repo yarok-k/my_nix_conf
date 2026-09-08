@@ -37,6 +37,7 @@
       nixosConfigurations = {
         yarok-pc = nixpkgs.lib.nixosSystem {
           inherit system;
+          pkgs = pkgs;
           # Один общий specialArgs для всех системных модулей
           specialArgs = {
             inherit inputs pkgs-unstable;
@@ -51,6 +52,7 @@
         };
         yarok-laptop = nixpkgs.lib.nixosSystem {
           inherit system;
+          pkgs = pkgs;
           # Один общий specialArgs для всех системных модулей
           specialArgs = {
             inherit inputs pkgs-unstable;
