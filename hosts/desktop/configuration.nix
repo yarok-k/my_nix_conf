@@ -5,13 +5,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
@@ -23,7 +20,5 @@
     enable = true;
     enable32Bit = true;
   };
-
-  system.stateVersion = "26.05";
 
 }

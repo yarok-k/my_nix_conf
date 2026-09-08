@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, hostname, ... }:
 {
   networking.networkmanager.enable = true;
-  networking.hostName = "yarok-pc";
+  networking.hostName = hostname;
 }

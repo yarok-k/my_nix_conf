@@ -40,6 +40,7 @@
           # Один общий specialArgs для всех системных модулей
           specialArgs = {
             inherit inputs pkgs-unstable;
+            hostname = "yarok-pc";
           };
           modules = [
             ./hosts/desktop
@@ -53,6 +54,7 @@
           # Один общий specialArgs для всех системных модулей
           specialArgs = {
             inherit inputs pkgs-unstable;
+            hostname = "yarok-laptop";
           };
           modules = [
             ./hosts/laptop
