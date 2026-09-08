@@ -10,6 +10,7 @@
     pkgs.discord
     pkgs.obsidian
     pkgs.nextcloud-client
+    pkgs.onlyoffice-desktopeditors
     #unstable pakages
     pkgs-unstable.telegram-desktop
     pkgs-unstable.yandex-music
