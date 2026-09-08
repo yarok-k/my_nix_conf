@@ -11,6 +11,19 @@
       ./hardware-configuration.nix
     ];
   boot.kernelPackages = pkgs.linuxPackages_zen;
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    open = true;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
+  };
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   system.stateVersion = "26.05";
 
 }

@@ -22,6 +22,7 @@
     enable = true;
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake .";
+      dev = "nix develop ~/.config/nixos";
     };
   };
 }
