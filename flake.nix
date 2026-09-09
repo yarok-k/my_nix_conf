@@ -34,7 +34,8 @@
     in
     {
       devShells.${system} = {
-        default = import ./shells/dev-shell.nix { inherit pkgs; };
+        default = import ./shells/python-shell.nix { inherit pkgs; };
+
       };
       nixosConfigurations = {
         yarok-pc = nixpkgs.lib.nixosSystem {
