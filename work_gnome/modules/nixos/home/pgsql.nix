@@ -4,12 +4,23 @@
   services.postgresql = {
     enable = true;
 
-    # Скрипт, который выполнится один раз при первой инициализации БД
-    initialScript = pkgs.writeText "init-pg-script.sql" ''
-      ALTER USER postgres WITH PASSWORD '1234';
+    # ensureUsers создает пользователя или обновляет его параметры при каждом запуске службы
+    ensureUsers = [
+      {
+        name = "postgres";
+        ensureClauses = {
+          superuser = true;
+          login = true;
+        };
+      }
+    ];
+
+    # Скрипт для принудительного обновления пароля при каждом старте службы
+    postStart = ''
+      $PSQL -tA -c "ALTER USER postgres WITH PASSWORD '1234';"
     '';
 
-    # Разрешаем подключение по паролю для локальной сети/127.0.0.1
+    # Разрешаем подключение по паролю
     authentication = pkgs.lib.mkOverride 10 ''
       # type  database        user            address                 auth-method
       local   all             all                                     trust
