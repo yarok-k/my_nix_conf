@@ -4,23 +4,19 @@
   services.postgresql = {
     enable = true;
 
-    # ensureUsers создает пользователя или обновляет его параметры при каждом запуске службы
+    # Автоматически создаёт или обновляет права и пароль пользователя при запуске
     ensureUsers = [
       {
         name = "postgres";
         ensureClauses = {
           superuser = true;
           login = true;
+          password = "1234"; # Пароль задаётся напрямую здесь
         };
       }
     ];
 
-    # Скрипт для принудительного обновления пароля при каждом старте службы
-    postStart = ''
-      $PSQL -tA -c "ALTER USER postgres WITH PASSWORD '1234';"
-    '';
-
-    # Разрешаем подключение по паролю
+    # Разрешаем подключение по паролю для 127.0.0.1
     authentication = pkgs.lib.mkOverride 10 ''
       # type  database        user            address                 auth-method
       local   all             all                                     trust
