@@ -34,7 +34,7 @@
     in
     {
       devShells.${system} = {
-        default = import ./shells/python-shell.nix { inherit pkgs; };
+        default = import ./shells/dev-shell.nix { inherit pkgs; };
 
       };
       nixosConfigurations = {
@@ -47,10 +47,10 @@
             hostname = "yarok-pc";
           };
           modules = [
-            ./hosts/desktop
-            ./modules
-            ./users
-            ./pkgs
+            ./work_gnome/hosts/desktop
+            ./work_gnome/modules
+            ./work_gnome/users
+            ./work_gnome/pkgs
           ];
         };
         yarok-laptop = nixpkgs.lib.nixosSystem {
@@ -62,10 +62,40 @@
             hostname = "yarok-laptop";
           };
           modules = [
-            ./hosts/laptop
-            ./modules
-            ./users
-            ./pkgs
+            ./work_gnome/hosts/laptop
+            ./work_gnome/modules
+            ./work_gnome/users
+            ./work_gnome/pkgs
+          ];
+        };
+        yarok-pc-test = nixpkgs.lib.nixosSystem {
+          inherit system;
+          pkgs = pkgs;
+          # Один общий specialArgs для всех системных модулей
+          specialArgs = {
+            inherit inputs pkgs-unstable;
+            hostname = "yarok-pc";
+          };
+          modules = [
+            ./rice_test/hosts/desktop
+            ./rice_test/modules
+            ./rice_test/users
+            ./rice_test/pkgs
+          ];
+        };
+        yarok-laptop-test = nixpkgs.lib.nixosSystem {
+          inherit system;
+          pkgs = pkgs;
+          # Один общий specialArgs для всех системных модулей
+          specialArgs = {
+            inherit inputs pkgs-unstable;
+            hostname = "yarok-laptop";
+          };
+          modules = [
+            ./rice_test/hosts/laptop
+            ./rice_test/modules
+            ./rice_test/users
+            ./rice_test/pkgs
           ];
         };
       };
