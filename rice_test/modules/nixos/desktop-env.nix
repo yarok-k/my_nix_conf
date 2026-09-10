@@ -1,8 +1,13 @@
 { config, lib, pkgs, ... }:
 
 {
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-  programs.dconf.enable = true;
+  programs.hyprland = {
+      enable = true;
+      xwayland.enable = true; # Поддержка приложений на X11
+    };
+  hardware.graphics.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
 }

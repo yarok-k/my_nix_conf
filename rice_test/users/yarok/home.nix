@@ -11,6 +11,9 @@
     pkgs.obsidian
     pkgs.nextcloud-client
     pkgs.onlyoffice-desktopeditors
+    pkgs.nemo
+    pkgs.kitty
+    pkgs.nwg-drawer
     #unstable pakages
     pkgs-unstable.telegram-desktop
     pkgs-unstable.yandex-music
