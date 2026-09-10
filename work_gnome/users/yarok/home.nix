@@ -5,13 +5,14 @@
   home.packages = with pkgs; [
     #stable pakages
     pkgs.git
-    pkgs-unstable.zed-editor
     pkgs.fastfetch
     pkgs.discord
     pkgs.obsidian
     pkgs.nextcloud-client
     pkgs.onlyoffice-desktopeditors
+    pkgs.pgadmin4
     #unstable pakages
+    pkgs-unstable.zed-editor
     pkgs-unstable.telegram-desktop
     pkgs-unstable.yandex-music
     pkgs-unstable.spotify
