@@ -16,6 +16,8 @@
     };
 
     opendeck-nix.url = "github:Kitt3120/opendeck-nix";
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
@@ -35,63 +37,62 @@
     {
       devShells.${system} = {
         default = import ./shells/dev-shell.nix { inherit pkgs; };
-
       };
+
       nixosConfigurations = {
         yarok-pc = nixpkgs.lib.nixosSystem {
-          inherit system;
-          pkgs = pkgs;
-          # Один общий specialArgs для всех системных модулей
+          inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-pc";
           };
           modules = [
+            inputs.home-manager.nixosModules.home-manager # Обязательно подключаем сам HM модуль
             ./work_gnome/hosts/desktop
             ./work_gnome/modules
             ./work_gnome/users
             ./work_gnome/pkgs
           ];
         };
+
         yarok-laptop = nixpkgs.lib.nixosSystem {
-          inherit system;
-          pkgs = pkgs;
-          # Один общий specialArgs для всех системных модулей
+          inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-laptop";
           };
           modules = [
+            inputs.home-manager.nixosModules.home-manager
             ./work_gnome/hosts/laptop
             ./work_gnome/modules
             ./work_gnome/users
             ./work_gnome/pkgs
           ];
         };
+
         yarok-pc-test = nixpkgs.lib.nixosSystem {
-          inherit system;
-          pkgs = pkgs;
-          # Один общий specialArgs для всех системных модулей
+          inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-pc";
           };
           modules = [
+            inputs.home-manager.nixosModules.home-manager
             ./rice_test/hosts/desktop
             ./rice_test/modules
             ./rice_test/users
             ./rice_test/pkgs
           ];
         };
+
         yarok-laptop-test = nixpkgs.lib.nixosSystem {
-          inherit system;
-          pkgs = pkgs;
-          # Один общий specialArgs для всех системных модулей
+          inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-laptop";
           };
           modules = [
+            inputs.home-manager.nixosModules.home-manager
             ./rice_test/hosts/laptop
             ./rice_test/modules
             ./rice_test/users

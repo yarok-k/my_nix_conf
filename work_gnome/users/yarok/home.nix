@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, pkgs-unstable, inputs, ... }:
 
 {
   home.stateVersion = "26.05"; # Ваша версия состояния Home Manager
@@ -10,7 +10,6 @@
     pkgs.obsidian
     pkgs.nextcloud-client
     pkgs.onlyoffice-desktopeditors
-    pkgs.pgadmin4
     #unstable pakages
     pkgs-unstable.zed-editor
     pkgs-unstable.telegram-desktop
@@ -18,6 +17,22 @@
     pkgs-unstable.spotify
     pkgs-unstable.steam
   ];
+  services.flatpak = {
+    enable = true;
+
+    # Автоматически добавляем репозиторий Flathub
+    remotes = [{
+      name = "flathub";
+      location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+    }];
+
+    packages = [
+      "org.pgadmin.pgadmin4"
+    ];
+
+    # Обновлять Flatpak-приложения при сборке системы
+    update.auto.enable = true;
+  };
 
   # Персональная настройка fish
   programs.fish = {
