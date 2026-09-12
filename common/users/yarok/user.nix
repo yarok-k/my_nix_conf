@@ -22,7 +22,7 @@
       ] ++ (if isrice then [
         ../../../rice/users/yarok/home-rice.nix
       ] else [
-        ../../../work/users/home-rice.nix
+        ../../../work/users/yarok/home-rice.nix
       ]);
     };
   };

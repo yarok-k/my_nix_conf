@@ -25,6 +25,9 @@ pkgs.mkShell {
     cairo
     pango
     gdk-pixbuf
+    gtk-layer-shell
+    networkmanager
+    libpulseaudio
     # Сюда же можно прокинуть Python с пакетами, если нужно
     # (python3.withPackages (ps: with ps; [
     # ]))

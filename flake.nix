@@ -37,6 +37,7 @@
     {
       devShells.${system} = {
         default = import ./shells/dev-shell.nix { inherit pkgs; };
+        dev_py = import ./shells/python-shell.nix { inherit pkgs; };
       };
 
       nixosConfigurations = {
@@ -54,6 +55,7 @@
             ./common/users
             ./common/pkgs
             ./work/modules/desktop-env.nix
+            ./work/modules/rice
           ];
         };
 
@@ -71,6 +73,7 @@
             ./common/users
             ./common/pkgs
             ./work/modules/desktop-env.nix
+            ./work/modules/rice
           ];
         };
 
@@ -88,6 +91,7 @@
             ./common/users
             ./common/pkgs
             ./rice/modules/desktop-env.nix
+            ./rice/modules/rice
           ];
         };
 
@@ -105,6 +109,7 @@
             ./common/users
             ./common/pkgs
             ./rice/modules/desktop-env.nix
+            ./rice/modules/rice
           ];
         };
       };

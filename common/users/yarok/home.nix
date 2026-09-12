@@ -10,8 +10,8 @@
     pkgs.nextcloud-client
     pkgs.onlyoffice-desktopeditors
     pkgs.tree
+    pkgs.zed-editor
     #unstable pakages
-    pkgs-unstable.zed-editor
     pkgs-unstable.telegram-desktop
     pkgs-unstable.yandex-music
     pkgs-unstable.spotify
@@ -40,6 +40,7 @@
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake";
       dev = "nix develop ~/Dotfiles/nixos";
+      dev_py = "nix develop ~/Dotfiles/nixos#dev_py";
     };
   };
 }

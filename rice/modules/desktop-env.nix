@@ -2,11 +2,13 @@
 
 {
   services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
   hardware.graphics.enable = true;
   programs.dconf.enable = true;
-  programs.hyprland = {
-      enable = true;
-      xwayland.enable = true; # Поддержка приложений на X11
-    };
+  programs.niri.enable = true;
+  services.displayManager.sessionPackages = [pkgs.niri];
+  environment.systemPackages = [
+    pkgs.xwayland-satellite
+  ];
 }
