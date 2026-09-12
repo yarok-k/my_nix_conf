@@ -72,7 +72,7 @@
           ];
         };
 
-        yarok-pc-test = nixpkgs.lib.nixosSystem {
+        yarok-pc-rice = nixpkgs.lib.nixosSystem {
           inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
@@ -88,7 +88,7 @@
           ];
         };
 
-        yarok-laptop-test = nixpkgs.lib.nixosSystem {
+        yarok-laptop-rice = nixpkgs.lib.nixosSystem {
           inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;

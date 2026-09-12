@@ -6,8 +6,5 @@
     ../../common/users/home.nix
   ];
   home.packages = with pkgs; [
-    pkgs.nemo
-    pkgs.kitty
-    pkgs.nwg-drawer
   ];
 }
