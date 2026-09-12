@@ -48,10 +48,11 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager # Обязательно подключаем сам HM модуль
-            ./work_gnome/hosts/desktop
-            ./work_gnome/modules
-            ./work_gnome/users
-            ./work_gnome/pkgs
+            ./common/hosts/desktop
+            ./common/modules/nixos
+            ./common/users
+            ./common/pkgs
+            ./work/modules/desktop-env.nix
           ];
         };
 
@@ -63,10 +64,11 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
-            ./work_gnome/hosts/laptop
-            ./work_gnome/modules
-            ./work_gnome/users
-            ./work_gnome/pkgs
+            ./common/hosts/laptop
+            ./common/modules/nixos
+            ./common/users
+            ./common/pkgs
+            ./work/modules/desktop-env.nix
           ];
         };
 
@@ -78,10 +80,11 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
-            ./rice_test/hosts/desktop
-            ./rice_test/modules
-            ./rice_test/users
-            ./rice_test/pkgs
+            ./common/hosts/desktop
+            ./common/modules/nixos
+            ./common/users
+            ./common/pkgs
+            ./rice/modules/desktop-env.nix
           ];
         };
 
@@ -93,10 +96,11 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
-            ./rice_test/hosts/laptop
-            ./rice_test/modules
-            ./rice_test/users
-            ./rice_test/pkgs
+            ./common/hosts/laptop
+            ./common/modules/nixos
+            ./common/users
+            ./common/pkgs
+            ./rice/modules/desktop-env.nix
           ];
         };
       };

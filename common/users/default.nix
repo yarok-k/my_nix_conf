@@ -3,9 +3,8 @@
 {
   imports = lib.filter
     (path:
-      # Исключаем сам default.nix, чтобы не уйти в бесконечную рекурсию
       baseNameOf path != "default.nix" &&
-      # Берем только файлы с расширением .nix
+      baseNameOf path != "home.nix" && # Игнорируем home.nix!
       lib.hasSuffix ".nix" (toString path)
     )
     (lib.filesystem.listFilesRecursive ./.);
