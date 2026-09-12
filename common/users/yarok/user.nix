@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, pkgs-unstable, ... }:
+{ config, lib, pkgs, inputs, pkgs-unstable,  isrice, ... }:
 
 {
   programs.fish.enable = true;
@@ -16,6 +16,14 @@
     sharedModules = [
       inputs.nix-flatpak.homeManagerModules.nix-flatpak # Добавляем модуль nix-flatpak
     ];
-    users.yarok = import ./home.nix;
+    users.yarok = {
+      imports = [
+        ./home.nix # Общая база пользователя
+      ] ++ (if isrice then [
+        ../../../rice/users/yarok/home-rice.nix
+      ] else [
+        ../../../work/users/home-rice.nix
+      ]);
+    };
   };
 }

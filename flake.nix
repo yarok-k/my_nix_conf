@@ -45,6 +45,7 @@
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-pc";
+            isrice = false;
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager # Обязательно подключаем сам HM модуль
@@ -61,6 +62,7 @@
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-laptop";
+            isrice = false;
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
@@ -77,6 +79,7 @@
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-pc";
+            isrice = true;
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
@@ -93,6 +96,7 @@
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-laptop";
+            isrice = false;
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
