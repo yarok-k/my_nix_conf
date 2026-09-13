@@ -1,0 +1,6 @@
+{...}:
+{
+  imports = [
+    ./niri/niri.nix
+  ];
+}

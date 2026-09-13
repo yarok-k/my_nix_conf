@@ -1,9 +1,11 @@
 { pkgs, pkgs-unstable, inputs, ... }:
 {
   home.stateVersion = "26.05"; # Ваша версия состояния Home Manager
-  home.packages = with pkgs; [
+  imports = [
+    ../../modules/nixos/home
+  ];
+  home.packages = [
     #stable pakages
-    pkgs.git
     pkgs.fastfetch
     pkgs.discord
     pkgs.obsidian
@@ -17,30 +19,5 @@
     pkgs-unstable.spotify
     pkgs-unstable.steam
   ];
-  services.flatpak = {
-    enable = true;
 
-    # Автоматически добавляем репозиторий Flathub
-    remotes = [{
-      name = "flathub";
-      location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-    }];
-
-    packages = [
-      "org.pgadmin.pgadmin4"
-    ];
-
-    # Обновлять Flatpak-приложения при сборке системы
-    update.auto.enable = true;
-  };
-
-  # Персональная настройка fish
-  programs.fish = {
-    enable = true;
-    shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake";
-      dev = "nix develop ~/Dotfiles/nixos";
-      dev_py = "nix develop ~/Dotfiles/nixos#dev_py";
-    };
-  };
 }
