@@ -12,5 +12,6 @@
     nwg-drawer
     fuzzel
     adwaita-icon-theme
+    swaybg
   ];
 }

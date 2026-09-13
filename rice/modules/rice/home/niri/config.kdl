@@ -252,8 +252,9 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
-spawn-at-startup "xwayland-satellite"
+//spawn-at-startup "xwayland-satellite"
+
+spawn-at-startup "swaybg" "-i" "/home/yarok/Pictures/wallpapers/HSF8JDJbgAAteIJ.jpg" "-m" "fill"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -351,7 +352,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+D hotkey-overlay-title="Open Launchpad: nwg-drawer" { spawn "nwg-drawer"; }
-    Mod+F hotkey-overlay-title="Open Filemanager: nemo" { spawn "nemo"; }
+    Mod+F hotkey-overlay-title="Open Filemanager: thunar" { spawn "thunar"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
