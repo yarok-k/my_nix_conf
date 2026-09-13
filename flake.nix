@@ -55,7 +55,7 @@
             ./common/users
             ./common/pkgs
             ./work/modules/desktop-env.nix
-            ./work/modules/rice
+            #./work/modules/rice
           ];
         };
 
