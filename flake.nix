@@ -100,7 +100,7 @@
           specialArgs = {
             inherit inputs pkgs-unstable;
             hostname = "yarok-laptop";
-            isrice = false;
+            isrice = true;
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager

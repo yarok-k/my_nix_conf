@@ -20,9 +20,9 @@
       imports = [
         ./home.nix # Общая база пользователя
       ] ++ (if isrice then [
-        ../../../rice/users/yarok/home-rice.nix
+        ../../../rice/users/yarok/home.nix
       ] else [
-        ../../../work/users/yarok/home-rice.nix
+        ../../../work/users/yarok/home.nix
       ]);
     };
   };

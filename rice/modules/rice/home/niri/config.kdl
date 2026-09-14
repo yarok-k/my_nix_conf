@@ -3,31 +3,23 @@
 // Check the wiki for a full description of the configuration:
 // https://niri-wm.github.io/niri/Configuration:-Introduction
 
-// Input device configuration.
-// Find the full list of options on the wiki:
-// https://niri-wm.github.io/niri/Configuration:-Input
+//====================================================================================
+//==== INPUT SETTINGS (wiki: https://niri-wm.github.io/niri/Configuration:-Input) ====
+//====================================================================================
 input {
+    // настройки клавиатуры
     keyboard {
         xkb {
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
+            // переключение раскладки на Super+Space между русской и английской
             layout "us,ru"
             options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
-            // localectl set-x11-keymap.
         }
 
-        // Enable numlock on startup, omitting this setting disables it.
+        // для включения numlock при старте системы раскомментировать (мне не актуально потому что у меня не на одном устройстве нету нампада)
         //numlock
     }
 
-    // Next sections include libinput settings.
-    // Omitting settings disables them, or leaves them at their default values.
-    // All commented-out settings here are examples, not defaults.
+    // настройки тачпада
     touchpad {
         // off
         tap
@@ -42,6 +34,7 @@ input {
         // disabled-on-external-mouse
     }
 
+    // настройки мыши
     mouse {
         // off
         // natural-scroll
@@ -50,6 +43,7 @@ input {
         // scroll-method "no-scroll"
     }
 
+    // настройки трекпоинта (актуально для синкпадов)
     trackpoint {
         // off
         // natural-scroll
@@ -60,28 +54,21 @@ input {
         // scroll-button-lock
         // middle-emulation
     }
+    // отключение обработки кнопки питания композитором, передаём управление в logind
     disable-power-key-handling
-    // Uncomment this to make the mouse warp to the center of newly focused windows.
+    // раскоментировать для перемещения мыши в центр окна при фокусе
     // warp-mouse-to-focus
-
-    // Focus windows and outputs automatically when moving the mouse into them.
-    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
 }
 
-// You can configure outputs by their name, which you can find
-// by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
-// https://niri-wm.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
+//========================================================================================
+//==== DISPLAY SETTINGS (wiki: https://niri-wm.github.io/niri/Configuration:-Outputs) ====
+//========================================================================================
 output "DP-2" {
     mode "2560x1440@59.951"
     scale 1
     transform "270"
     position x=0 y=0
 }
-
 output "DP-3" {
     mode "2560x1440@144.006"
     scale 1
@@ -93,9 +80,10 @@ output "DP-3" {
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Layout
+
 layout {
-    // Set gaps around windows in logical pixels.
-    gaps 5
+    // отступы от края экрана до окна и между окнами
+    gaps 10
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -105,17 +93,11 @@ layout {
     //   together with the previously focused column.
     center-focused-column "never"
 
-    // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
+    // пресеты ширины меняющиеся на Super+R
     preset-column-widths {
-        // Proportion sets the width as a fraction of the output width, taking gaps into account.
-        // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
-        // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.25
         proportion 0.5
         proportion 1.0
-
-        // Fixed sets the width in logical pixels exactly.
-        // fixed 1920
     }
 
     // You can also customize the heights that "switch-preset-window-height" (Mod+Ctrl+Shift+R) toggles between.
@@ -140,10 +122,10 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        // off
+        off
 
         // How many logical pixels the ring extends out from the windows.
-        width 4
+        width 2
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -179,9 +161,9 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        on
+        //on
 
-        width 1
+        width 2
         active-color "#ffc87f"
         inactive-color "#505050"
 
@@ -260,7 +242,7 @@ spawn-at-startup "swaybg" "-i" "/home/yarok/Pictures/wallpapers/HSF8JDJbgAAteIJ.
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 hotkey-overlay {
-    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
+    // отключаем запуск подсказок по хоткеям ври запуске сессии
     skip-at-startup
 }
 
@@ -269,7 +251,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -302,6 +284,11 @@ window-rule {
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
