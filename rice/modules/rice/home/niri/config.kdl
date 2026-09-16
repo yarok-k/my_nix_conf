@@ -122,10 +122,10 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        off
+        //off
 
         // How many logical pixels the ring extends out from the windows.
-        width 2
+        width 5
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -161,9 +161,9 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        //on
+        off
 
-        width 2
+        width 0
         active-color "#ffc87f"
         inactive-color "#505050"
 
@@ -286,19 +286,54 @@ window-rule {
     default-column-width {}
 }
 
+// правило для скругления окон
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 15
     clip-to-geometry true
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+
+// Правила для Telegram Media Viewer
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id="org.telegram.desktop" title=r#"Media viewer"#
+
+    open-floating true
+
+    // Принудительно отменяем полноэкранный режим и максимизацию при создании окна
+    open-fullscreen false
+    open-maximized false
+
+    // Снимаем блокировку геометрии
+    default-column-width { proportion 1.0; }
+    default-window-height { proportion 1.0; }
+    geometry-corner-radius 0
+    focus-ring {off;}
+    clip-to-geometry true
+}
+window-rule {
+    match app-id="org.telegram.desktop" title=r#"\.md"#
+
+    open-floating true
+
+    // Принудительно отменяем полноэкранный режим и максимизацию при создании окна
+    open-fullscreen false
+    open-maximized false
+
+    // Снимаем блокировку геометрии
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.8; }
+    geometry-corner-radius 0
+    focus-ring {off;}
+    clip-to-geometry true
+}
+
+// Правило для Firefox Picture-in-Picture
+window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
     open-floating true
 }
+
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
