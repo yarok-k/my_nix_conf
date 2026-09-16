@@ -63,13 +63,13 @@ input {
 //========================================================================================
 //==== DISPLAY SETTINGS (wiki: https://niri-wm.github.io/niri/Configuration:-Outputs) ====
 //========================================================================================
-output "DP-2" {
+output "DP-1" {
     mode "2560x1440@59.951"
     scale 1
     transform "270"
     position x=0 y=0
 }
-output "DP-3" {
+output "DP-2" {
     mode "2560x1440@144.006"
     scale 1
     transform "normal"
@@ -339,7 +339,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+D hotkey-overlay-title="Open Launchpad: nwg-drawer" { spawn "nwg-drawer"; }
-    Mod+F hotkey-overlay-title="Open Filemanager: thunar" { spawn "thunar"; }
+    Mod+F hotkey-overlay-title="Open Filemanager: nautilus" { spawn "nautilus"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
