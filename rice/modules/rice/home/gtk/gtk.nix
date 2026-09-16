@@ -1,9 +1,21 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
-  xdg.configFile."gtk-3.0/gtk.css".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/Dotfiles/nixos/rice/modules/rice/home/gtk/gtk.css";
-  xdg.configFile."gtk-4.0/gtk.css".source =
-    config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/Dotfiles/nixos/rice/modules/rice/home/gtk/gtk.css";
+  imports = [
+    ../../gtk
+  ];
+
+  gtk = {
+    enable = true;
+
+    # Стили для GTK3
+    gtk3.extraCss = ''
+      @import url("shell.css");
+    '';
+
+    # Стили для GTK4 (включая Nautilus)
+    gtk4.extraCss = ''
+      @import url("nautilus.css");
+      @import url("shell.css");
+    '';
+  };
 }

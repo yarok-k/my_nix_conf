@@ -1,0 +1,17 @@
+window,
+window.solid-csd,
+window.csd,
+window decoration {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important; /* Убираем отступы, в которых может прятаться тень */
+}
+
+/* 2. Отключаем скругление у верхней шапки (HeaderBar) и кнопок управления */
+headerbar,
+headerbar button,
+.titlebar,
+.titlebar button {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}

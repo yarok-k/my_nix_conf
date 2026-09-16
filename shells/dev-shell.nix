@@ -17,6 +17,8 @@ pkgs.mkShell {
     kubectl
     docker-compose
     usbutils
+    exfatprogs
+    openssl
   ];
 
   buildInputs = with pkgs; [

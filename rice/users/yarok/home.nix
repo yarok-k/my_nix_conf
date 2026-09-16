@@ -7,7 +7,7 @@
   ];
 
   home.packages = with pkgs; [
-    thunar
+    nautilus
     alacritty
     nwg-drawer
     fuzzel

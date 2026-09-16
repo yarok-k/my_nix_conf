@@ -1,0 +1,16 @@
+/* Убираем скругления и внешние тени окна Nautilus */
+window.background {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Убираем скругление у HeaderBar */
+headerbar {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Убираем рамки боковой панели */
+.navigation-sidebar {
+    border-right: none;
+}
