@@ -2,7 +2,7 @@
 {
   programs.steam = {
     enable = true;
-    remotePlay.openFirewall = true; # Опционально
-    dedicatedServer.openFirewall = true; # Опционально
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
   };
 }

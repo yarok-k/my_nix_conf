@@ -12,12 +12,10 @@
     pkgs.nextcloud-client
     pkgs.onlyoffice-desktopeditors
     pkgs.tree
-    pkgs.zed-editor
     #unstable pakages
+    pkgs-unstable.zed-editor
     pkgs-unstable.telegram-desktop
-    pkgs-unstable.yandex-music
     pkgs-unstable.spotify
-    pkgs-unstable.steam
   ];
 
 }
