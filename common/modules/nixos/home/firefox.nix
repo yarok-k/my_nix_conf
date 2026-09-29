@@ -2,6 +2,6 @@
 {
   home.stateVersion = "26.05"; # Ваша версия состояния Home Manager
   home.packages = [
-    pkgs.firefox
+    pkgs-unstable.firefox
   ];
 }
