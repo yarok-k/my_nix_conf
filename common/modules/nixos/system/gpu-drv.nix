@@ -1,14 +1,16 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, inputs, hostname, ... }:
 {
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    open = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
-  };
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  config = lib.mkIf (hostname == "yarok-pc") {
+    hardware.nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      open = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
+    };
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
   };
 }

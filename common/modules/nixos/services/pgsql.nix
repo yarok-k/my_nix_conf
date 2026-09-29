@@ -1,8 +1,7 @@
 { pkgs, ... }:
-
 {
   services.postgresql = {
-    enable = true;
+    enable = false;
 
     # Автоматически создаёт или обновляет права и пароль пользователя при запуске
     ensureUsers = [
