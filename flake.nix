@@ -38,12 +38,8 @@
       devShells.${system} = {
         default = import ./shells/dev-shell.nix { inherit pkgs; };
         dev_py = import ./shells/python-shell.nix { inherit pkgs; };
-<<<<<<< HEAD
         dev_c = import ./shells/c-shell.nix { inherit pkgs; };
         h_dev = import ./shells/hack-shell.nix { inherit pkgs; };
-=======
-        devops = import ./shells/devops-shell.nix { inherit pkgs; };
->>>>>>> 9531f97 (pc)
       };
 
       nixosConfigurations = {
