@@ -27,6 +27,7 @@
         default = lib.mkForce [ "gtk" ];
         "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
         "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ];
       };
       common.default = lib.mkForce [ "gtk" ];
     };

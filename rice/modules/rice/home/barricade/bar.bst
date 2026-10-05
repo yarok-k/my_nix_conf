@@ -3,3 +3,6 @@ elements:
   center:
     - "clock"
   right:
+    - "layout"
+    - "audio"
+    - "network"
