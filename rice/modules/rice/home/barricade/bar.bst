@@ -4,5 +4,6 @@ elements:
     - "clock"
   right:
     - "layout"
-    - "audio"
     - "network"
+    - "audio"
+    - "battery"

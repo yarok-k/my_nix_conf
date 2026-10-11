@@ -7,8 +7,9 @@ pkgs.mkShell {
   ];
 
   buildInputs = with pkgs; [
-    # (python3.withPackages (ps: with ps; [
-    # ]))
+    (python3.withPackages (ps: with ps; [
+    pandas
+    ]))
   ];
   LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
 }
