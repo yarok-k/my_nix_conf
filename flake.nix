@@ -48,6 +48,7 @@
           inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
+            gpuvendor = "nvidia"; # switch to amd for amd cards or intel for intel cards or nvidia for nvidia cards
             hostname = "yarok-pc";
             isrice = false;
           };
@@ -66,6 +67,7 @@
           inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
+            gpuvendor = "amd"; # switch to amd for amd cards or intel for intel cards or nvidia for nvidia cards
             hostname = "yarok-laptop";
             isrice = false;
           };
@@ -84,6 +86,7 @@
           inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
+            gpuvendor = "nvidia"; # switch to amd for amd cards or intel for intel cards or nvidia for nvidia cards
             hostname = "yarok-pc";
             isrice = true;
           };
@@ -102,6 +105,7 @@
           inherit system pkgs;
           specialArgs = {
             inherit inputs pkgs-unstable;
+            gpuvendor = "amd"; # switch to amd for amd cards or intel for intel cards or nvidia for nvidia cards
             hostname = "yarok-laptop";
             isrice = true;
           };

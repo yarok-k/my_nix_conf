@@ -13,7 +13,7 @@
     pkgs.onlyoffice-desktopeditors
     pkgs.tree
     #unstable pakages
-    pkgs-unstable.zed-editor
+    pkgs.zed-editor
     pkgs-unstable.telegram-desktop
     pkgs-unstable.spotify
   ];
