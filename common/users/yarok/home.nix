@@ -1,4 +1,9 @@
-{ pkgs, pkgs-unstable, inputs, ... }:
+{
+  pkgs,
+  pkgs-unstable,
+  inputs,
+  ...
+}:
 {
   home.stateVersion = "26.05"; # Ваша версия состояния Home Manager
   imports = [
@@ -13,7 +18,7 @@
     pkgs.onlyoffice-desktopeditors
     pkgs.tree
     #unstable pakages
-    pkgs.zed-editor
+    pkgs-unstable.zed-editor
     pkgs-unstable.telegram-desktop
     pkgs-unstable.spotify
   ];

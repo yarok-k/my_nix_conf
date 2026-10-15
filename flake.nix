@@ -18,6 +18,11 @@
     opendeck-nix.url = "github:Kitt3120/opendeck-nix";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    nix-craftapps = {
+      url = "github:olafkfreund/nix-craftapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
@@ -54,6 +59,7 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager # Обязательно подключаем сам HM модуль
+            inputs.nix-craftapps.nixosModules.default
             ./common/hosts/desktop
             ./common/modules/nixos
             ./common/users
@@ -73,6 +79,7 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
+            inputs.nix-craftapps.nixosModules.default
             ./common/hosts/laptop
             ./common/modules/nixos
             ./common/users
@@ -92,6 +99,7 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
+            inputs.nix-craftapps.nixosModules.default
             ./common/hosts/desktop
             ./common/modules/nixos
             ./common/users
@@ -111,6 +119,7 @@
           };
           modules = [
             inputs.home-manager.nixosModules.home-manager
+            inputs.nix-craftapps.nixosModules.default
             ./common/hosts/laptop
             ./common/modules/nixos
             ./common/users

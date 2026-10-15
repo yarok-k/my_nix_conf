@@ -19,15 +19,5 @@
         package = config.boot.kernelPackages.nvidiaPackages.beta;
       };
     })
-
-    # AMD DRV
-    (lib.mkIf (gpuvendor == "amd") {
-      services.xserver.videoDrivers = [ "amdgpu" ];
-      hardware.amdgpu.initrd.enable = true;
-      hardware.graphics.extraPackages = with pkgs; [
-        rocmPackages.clr.icd
-      ];
-    })
-
   ];
 }
