@@ -1,12 +1,12 @@
 { pkgs, ...}:
 {
-  home.packages = [pkgs.material-icons];
+  home.packages = [pkgs.adwaita-icon-theme];
 
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Material-Dark";
-      package = pkgs.material-icons;
+      name = "Adwatia";
+      package = pkgs.adwaita-icon-theme;
     };
   };
 }

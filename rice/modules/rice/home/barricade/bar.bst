@@ -3,7 +3,8 @@ elements:
   center:
     - "clock"
   right:
-    - "layout"
-    - "network"
-    - "audio"
-    - "battery"
+    - layout: None
+    - network: None
+    - audio: "/home/yarok/Projects/barricade-sound/target/debug/Barricade-sound"
+    - battery: None
+stylesheet: ""

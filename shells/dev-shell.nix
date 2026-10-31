@@ -12,10 +12,6 @@ pkgs.mkShell {
     cargo
     rust-analyzer
     python3
-    go
-    ansible
-    kubectl
-    docker-compose
     usbutils
     exfatprogs
     openssl

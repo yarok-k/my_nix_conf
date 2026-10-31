@@ -8,5 +8,6 @@
     pkgs.nixd
     pkgs.python3
     pkgs.clang
+    pkgs.gcc
   ];
 }
