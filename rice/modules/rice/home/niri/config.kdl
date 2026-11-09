@@ -84,7 +84,7 @@ output "DP-2" {
 layout {
     // отступы от края экрана до окна и между окнами
     gaps 10
-
+    background-color "transparent"
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -236,7 +236,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 //spawn-at-startup "xwayland-satellite"
 
-spawn-at-startup "swaybg" "-i" "~/Изображения/Wallpapers/HST29P0bAAEXcGp.jpg" "-m" "fill"
+//spawn-at-startup "swaybg" "-i" "~/Изображения/Wallpapers/HST29P0bAAEXcGp.jpg" "-m" "fill"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -290,6 +290,10 @@ window-rule {
 window-rule {
     geometry-corner-radius 15
     clip-to-geometry true
+}
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
 }
 
 
