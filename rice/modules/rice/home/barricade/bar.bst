@@ -5,6 +5,6 @@ elements:
   right:
     - layout: None
     - network: None
-    - audio: "/home/yarok/Projects/barricade-sound/target/debug/Barricade-sound -s"
+    - audio: "barricade-sound -s"
     - battery: None
 stylesheet: ""

@@ -291,6 +291,9 @@ window-rule {
     geometry-corner-radius 15
     clip-to-geometry true
 }
+
+// barricade
+spawn-at-startup "barricade_bar"
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true

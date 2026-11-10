@@ -1,5 +1,45 @@
 {
   "nodes": {
+    "barricade-bar": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794142972,
+        "narHash": "sha256-7i9WjOiFwH9oOwazAtGdfPRCDTrCoPKXGCN7H1wLwMg=",
+        "owner": "yarok-k",
+        "repo": "barricade-bar",
+        "rev": "8d609b01da5a941d00b2470fbe055da4d6a856d6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yarok-k",
+        "repo": "barricade-bar",
+        "type": "github"
+      }
+    },
+    "barricade-sound": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794289963,
+        "narHash": "sha256-SRzAwv2xf12YNMusCs825arDcP6t1DH8eh69hT8TAlw=",
+        "owner": "yarok-k",
+        "repo": "barricade-sound",
+        "rev": "6ee871c8387226fc1b52a8a171f14015daad9c54",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yarok-k",
+        "repo": "barricade-sound",
+        "type": "github"
+      }
+    },
     "happ-proxy": {
       "flake": false,
       "locked": {
@@ -140,6 +180,8 @@
     },
     "root": {
       "inputs": {
+        "barricade-bar": "barricade-bar",
+        "barricade-sound": "barricade-sound",
         "happ-proxy": "happ-proxy",
         "home-manager": "home-manager",
         "nix-craftapps": "nix-craftapps",

@@ -23,6 +23,15 @@
       url = "github:olafkfreund/nix-craftapps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    barricade-bar = {
+      url = "github:yarok-k/barricade-bar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    barricade-sound = {
+      url = "github:yarok-k/barricade-sound";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
