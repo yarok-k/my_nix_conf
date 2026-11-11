@@ -32,6 +32,7 @@
       url = "github:yarok-k/barricade-bar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     barricade-sound = {
       url = "github:yarok-k/barricade-sound";
       inputs.nixpkgs.follows = "nixpkgs";

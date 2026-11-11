@@ -7,19 +7,11 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1794142972,
         "narHash": "sha256-7i9WjOiFwH9oOwazAtGdfPRCDTrCoPKXGCN7H1wLwMg=",
         "owner": "yarok-k",
         "repo": "barricade-bar",
         "rev": "8d609b01da5a941d00b2470fbe055da4d6a856d6",
-=======
-        "lastModified": 1794138621,
-        "narHash": "sha256-pE9YD+VC6hSZ0PpBNN4B2YHS9QuEIluVGRh3FpvTsBs=",
-        "owner": "yarok-k",
-        "repo": "barricade-bar",
-        "rev": "43d7d4f7ab7d97b52273cb052ab4bd974cc41c99",
->>>>>>> e1d1a4d (add: pc)
         "type": "github"
       },
       "original": {
@@ -28,7 +20,6 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
     "barricade-sound": {
       "inputs": {
         "nixpkgs": [
@@ -49,8 +40,6 @@
         "type": "github"
       }
     },
-=======
->>>>>>> e1d1a4d (add: pc)
     "happ-proxy": {
       "flake": false,
       "locked": {
@@ -192,10 +181,7 @@
     "root": {
       "inputs": {
         "barricade-bar": "barricade-bar",
-<<<<<<< HEAD
         "barricade-sound": "barricade-sound",
-=======
->>>>>>> e1d1a4d (add: pc)
         "happ-proxy": "happ-proxy",
         "home-manager": "home-manager",
         "nix-craftapps": "nix-craftapps",
