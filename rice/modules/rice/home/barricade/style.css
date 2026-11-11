@@ -1,0 +1,29 @@
+window {
+    background: transparent;
+}
+.barricade_background {
+    background-color: skyblue;
+
+    border-radius: 10px;
+}
+
+.barricade_statusbar_button {
+    color: black;
+    background: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    transition: background-color 150ms ease;
+    padding: 6px 6px;
+    min-height: 0;
+    min-width: 0;
+    margin: 4px 6px;
+}
+
+.barricade_statusbar_button:hover {
+    background-color: #6fbdee;
+}
+
+.barricade_statusbar_button:active {
+    background-color: #5aaedf;
+}

@@ -5,11 +5,15 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   programs.dconf.enable = true;
+  services.xserver.xkb.layout = "us,ru";
 
   services.desktopManager.gnome.extraGSettingsOverrides = ''
     [org.gnome.desktop.wm.preferences]
     button-layout='appmenu:minimize,maximize,close'
   '';
+
+
+
   environment.systemPackages = [
     pkgs.gnomeExtensions.dash-to-dock
   ];

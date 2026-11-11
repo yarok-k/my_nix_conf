@@ -14,6 +14,10 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    barricade-bar = {
+      url = "github:yarok-k/barricade-bar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     opendeck-nix.url = "github:Kitt3120/opendeck-nix";
 
@@ -41,6 +45,8 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        # даёт pkgs.barricade-bar во всех модулях (NixOS и home-manager)
+        overlays = [ inputs.barricade-bar.overlays.default ];
       };
 
       pkgs-unstable = import nixpkgs-unstable {
@@ -89,6 +95,7 @@
           modules = [
             inputs.home-manager.nixosModules.home-manager
             inputs.nix-craftapps.nixosModules.default
+
             ./common/hosts/laptop
             ./common/modules/nixos
             ./common/users

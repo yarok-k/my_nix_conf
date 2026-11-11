@@ -23,8 +23,5 @@
     keyMap = "ru";
   #      useXkbConfig = true; # use xkb.options in tty.
   };
-  services.xserver.xkb = {
-    layout = "us,ru";
-    options = "grp:win_space_toggle";
-};
 }
+
