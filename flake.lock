@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794142972,
-        "narHash": "sha256-7i9WjOiFwH9oOwazAtGdfPRCDTrCoPKXGCN7H1wLwMg=",
+        "lastModified": 1794428848,
+        "narHash": "sha256-3cAEVWRq0IoAuIbGSEfOimW4eEWJFb1a+vzqKKPiLZY=",
         "owner": "yarok-k",
         "repo": "barricade-bar",
-        "rev": "8d609b01da5a941d00b2470fbe055da4d6a856d6",
+        "rev": "bde78aeab0504a41be3e3bce1b68c4518d8ddf53",
         "type": "github"
       },
       "original": {
@@ -27,16 +27,36 @@
         ]
       },
       "locked": {
-        "lastModified": 1794289963,
-        "narHash": "sha256-SRzAwv2xf12YNMusCs825arDcP6t1DH8eh69hT8TAlw=",
+        "lastModified": 1794383243,
+        "narHash": "sha256-ooz1SfkCwq46mqBhZmEtL0aw3Sz/K48wcvOIUj3l3rk=",
         "owner": "yarok-k",
         "repo": "barricade-sound",
-        "rev": "6ee871c8387226fc1b52a8a171f14015daad9c54",
+        "rev": "7190d4811b8ff7e7d93a34f1b6d6221ccc16c2c3",
         "type": "github"
       },
       "original": {
         "owner": "yarok-k",
         "repo": "barricade-sound",
+        "type": "github"
+      }
+    },
+    "barricade-wallpaper": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794387806,
+        "narHash": "sha256-wEGqKfDnZ9gff8f8WZTbKp9K109AcfuwN35Ep5sJiko=",
+        "owner": "yarok-k",
+        "repo": "barricade-wallpaper",
+        "rev": "86a1407bbe6468767dc816ef8201abecfd9f288b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yarok-k",
+        "repo": "barricade-wallpaper",
         "type": "github"
       }
     },
@@ -182,6 +202,7 @@
       "inputs": {
         "barricade-bar": "barricade-bar",
         "barricade-sound": "barricade-sound",
+        "barricade-wallpaper": "barricade-wallpaper",
         "happ-proxy": "happ-proxy",
         "home-manager": "home-manager",
         "nix-craftapps": "nix-craftapps",
