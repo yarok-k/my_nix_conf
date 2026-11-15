@@ -12,7 +12,6 @@
   home.packages = [
     #stable pakages
     pkgs.fastfetch
-    pkgs.discord
     pkgs.obsidian
     pkgs.nextcloud-client
     pkgs.onlyoffice-desktopeditors
