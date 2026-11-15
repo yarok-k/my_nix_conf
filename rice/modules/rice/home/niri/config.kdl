@@ -293,8 +293,8 @@ window-rule {
 }
 
 // barricade
-spawn-at-startup "barricade_bar"
-spawn-at-startup "barricade-wallpaper" "-f" "~/Pictures/Wallpapers/HSF8JDJbgAAteIJ.jpg"
+spawn-at-startup "barricade-bar"
+spawn-at-startup "barricade-wallpaper" "-f" "~/Pictures/wallpapers/HSK3oqvakAAFb3I.jpg"
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true

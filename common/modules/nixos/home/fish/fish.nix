@@ -3,6 +3,9 @@
   home.stateVersion = "26.05"; # Ваша версия состояния Home Manager
   programs.fish = {
     enable = true;
+    interactiveShellInit = ''
+      set fish_greeting # отключает приветствие
+    '';
     shellAliases = {
       dev = "nix develop ~/Dotfiles/nixos";
       dev_py = "nix develop ~/Dotfiles/nixos#dev_py";
