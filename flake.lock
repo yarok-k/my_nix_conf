@@ -47,11 +47,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794387806,
-        "narHash": "sha256-wEGqKfDnZ9gff8f8WZTbKp9K109AcfuwN35Ep5sJiko=",
+        "lastModified": 1794429866,
+        "narHash": "sha256-I8h7UqlKKBHW4jTzL1Ga5JM+QrDTGBd3au3SzD1cqLs=",
         "owner": "yarok-k",
         "repo": "barricade-wallpaper",
-        "rev": "86a1407bbe6468767dc816ef8201abecfd9f288b",
+        "rev": "3b1aa785d49d1b8158843d498d78fe35d63afd29",
         "type": "github"
       },
       "original": {
