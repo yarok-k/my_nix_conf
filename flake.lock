@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794428848,
-        "narHash": "sha256-3cAEVWRq0IoAuIbGSEfOimW4eEWJFb1a+vzqKKPiLZY=",
+        "lastModified": 1794690399,
+        "narHash": "sha256-uAuxBEoaV5OfQbdowzbUUptFksHzCUuyKZxQwt1hap8=",
         "owner": "yarok-k",
         "repo": "barricade-bar",
-        "rev": "bde78aeab0504a41be3e3bce1b68c4518d8ddf53",
+        "rev": "44439c713330f46a4e42457e9ff6836c66ee1773",
         "type": "github"
       },
       "original": {
@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794383243,
-        "narHash": "sha256-ooz1SfkCwq46mqBhZmEtL0aw3Sz/K48wcvOIUj3l3rk=",
+        "lastModified": 1794733831,
+        "narHash": "sha256-7g4FyYPxtUz3D2neMn3ud7W40viyxT9JhxJ3aYGaym8=",
         "owner": "yarok-k",
         "repo": "barricade-sound",
-        "rev": "7190d4811b8ff7e7d93a34f1b6d6221ccc16c2c3",
+        "rev": "4891e3a38af437a98be05e0c0e6c87bd88476a20",
         "type": "github"
       },
       "original": {
@@ -47,11 +47,19 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1794429866,
         "narHash": "sha256-I8h7UqlKKBHW4jTzL1Ga5JM+QrDTGBd3au3SzD1cqLs=",
         "owner": "yarok-k",
         "repo": "barricade-wallpaper",
         "rev": "3b1aa785d49d1b8158843d498d78fe35d63afd29",
+=======
+        "lastModified": 1794689241,
+        "narHash": "sha256-Upm6TK6WuBjqZFC92K0zebybDUirC7dr7bDrHByRQYY=",
+        "owner": "yarok-k",
+        "repo": "barricade-wallpaper",
+        "rev": "c51a5ad7a88c86c5174ab1811dffefe272094b77",
+>>>>>>> 602052f54c92b93a48ab824cd9057d31755bbe65
         "type": "github"
       },
       "original": {
@@ -104,11 +112,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791540118,
-        "narHash": "sha256-GHAjutOIsjA7kzusttluaftJH0yBT53LMiFpm6Nvd8o=",
+        "lastModified": 1794461005,
+        "narHash": "sha256-pxoEENKNS7cJF8i/CJvRPkOBCnGL8aZRGZl8onkigbM=",
         "owner": "olafkfreund",
         "repo": "nix-craftapps",
-        "rev": "f93a6e61de21143bf54785adaefa5b4d9d1b3e1f",
+        "rev": "62d5dd900f46e22f99dc9a5dcab3acd486c1a8da",
         "type": "github"
       },
       "original": {

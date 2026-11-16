@@ -1,10 +1,14 @@
 window {
     background: transparent;
-}
-.barricade_background {
-    background-color: skyblue;
 
-    border-radius: 10px;
+}
+.barricade_applet_background {
+    background-color: cyan;
+    padding: 10px;
+    border-radius: 28px;
+}
+.barricade_statusbar_background {
+    background-color: cyan;
 }
 
 .barricade_statusbar_button {
@@ -21,9 +25,52 @@ window {
 }
 
 .barricade_statusbar_button:hover {
-    background-color: #6fbdee;
+    background-color: plum;
+    border-radius: 8px;
 }
 
 .barricade_statusbar_button:active {
-    background-color: #5aaedf;
+    background-color: plum;
+    border-radius: 8px;
+}
+
+
+
+.barricade_applet_button {
+    color: black;
+    background: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    transition: background-color 150ms ease;
+}
+.barricade_list_popup_button {
+    color: black;
+    background: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    transition: background-color 150ms ease;
+}
+.barricade_applet_widget_background {
+    background-color: plum;
+    padding: 4px;
+    margin: 3px;
+    border-radius: 18px;
+}
+
+.barricade_player button {
+    background: rgba(0, 0, 0, 0.35);
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    color: white;
+    border-radius: 999px;
+}
+.barricade_player button:hover {
+    background: rgba(0, 0, 0, 0.55);
+}
+.barricade_player label {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
