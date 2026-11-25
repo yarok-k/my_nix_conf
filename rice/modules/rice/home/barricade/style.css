@@ -35,6 +35,12 @@ window {
 }
 
 
+.barricade_calendar {
+    background: transparent;
+    color: black;
+    border: none;
+}
+
 
 .barricade_applet_button {
     color: black;

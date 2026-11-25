@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794690399,
-        "narHash": "sha256-uAuxBEoaV5OfQbdowzbUUptFksHzCUuyKZxQwt1hap8=",
+        "lastModified": 1795498212,
+        "narHash": "sha256-idScbgCS8DI9tlEvEflMbqB884C82fGUjGqE0GgKxRo=",
         "owner": "yarok-k",
         "repo": "barricade-bar",
-        "rev": "44439c713330f46a4e42457e9ff6836c66ee1773",
+        "rev": "5d6cad1eadca1edb4cedfec1eacf085b006c10f8",
         "type": "github"
       },
       "original": {
@@ -47,19 +47,11 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1794429866,
-        "narHash": "sha256-I8h7UqlKKBHW4jTzL1Ga5JM+QrDTGBd3au3SzD1cqLs=",
-        "owner": "yarok-k",
-        "repo": "barricade-wallpaper",
-        "rev": "3b1aa785d49d1b8158843d498d78fe35d63afd29",
-=======
         "lastModified": 1794689241,
         "narHash": "sha256-Upm6TK6WuBjqZFC92K0zebybDUirC7dr7bDrHByRQYY=",
         "owner": "yarok-k",
         "repo": "barricade-wallpaper",
         "rev": "c51a5ad7a88c86c5174ab1811dffefe272094b77",
->>>>>>> 602052f54c92b93a48ab824cd9057d31755bbe65
         "type": "github"
       },
       "original": {
