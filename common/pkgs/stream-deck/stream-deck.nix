@@ -23,6 +23,14 @@
       # 2. Права на uinput (для эмуляции нажатий клавиатуры, мыши и шорткатов)
       KERNEL=="uinput", SUBSYSTEM=="misc", MODE="0660", GROUP="plugdev", OPTIONS+="static_node=uinput"
     '';
+
+    # Настройки GTK для WebKit (размер шрифта/DPI), в niri их никто не задаёт
+    environment.etc."xdg/gtk-3.0/settings.ini".text = ''
+      [Settings]
+      gtk-font-name=Adwaita Sans 12
+      gtk-xft-dpi=122880
+    '';
+
     environment.systemPackages = with pkgs; [
       playerctl
     ];

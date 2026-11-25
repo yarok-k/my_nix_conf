@@ -1,7 +1,7 @@
 elements:
   left:
   center:
-    - "clock"
+    - clock: "barricade-notifications -s"
   right:
     - layout: None
     - network: None

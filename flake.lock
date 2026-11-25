@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "barricade-notifications": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795617275,
+        "narHash": "sha256-24x/6xRrGgAlBL87xmBphGVIviERYX1tzy7ECiMGTxU=",
+        "owner": "yarok-k",
+        "repo": "barricade-notifications",
+        "rev": "c6ecca2866d4f729ea69f31defab7d74abab97ea",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yarok-k",
+        "repo": "barricade-notifications",
+        "type": "github"
+      }
+    },
     "barricade-sound": {
       "inputs": {
         "nixpkgs": [
@@ -201,6 +221,7 @@
     "root": {
       "inputs": {
         "barricade-bar": "barricade-bar",
+        "barricade-notifications": "barricade-notifications",
         "barricade-sound": "barricade-sound",
         "barricade-wallpaper": "barricade-wallpaper",
         "happ-proxy": "happ-proxy",

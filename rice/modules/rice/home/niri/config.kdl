@@ -294,7 +294,8 @@ window-rule {
 
 // barricade
 spawn-at-startup "barricade-bar"
-spawn-at-startup "barricade-wallpaper" "-f" "~/Nextcloud/Photos/wallpapers/HXSxMZBbsAAGOlj.jpg"
+spawn-at-startup "barricade-notifications"
+spawn-at-startup "barricade-wallpaper" "-f" "~/Nextcloud/Photos/Wallpapers/HXSxMZBbsAAGOlj.jpg"
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true

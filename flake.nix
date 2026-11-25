@@ -37,6 +37,11 @@
       url = "github:yarok-k/barricade-wallpaper";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    barricade-notifications = {
+      url = "github:yarok-k/barricade-notifications";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
